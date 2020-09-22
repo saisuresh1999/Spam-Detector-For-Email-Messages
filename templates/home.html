@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Spam Detector For Email Messages</title>
-	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Spam Detector</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
 
-	<header>
-		<div class="container">
-		<div id="brandname">
-			Machine Learning App with Flask
-		</div>
-		<h2>Spam Detector For Email Messages</h2>
-		
-	</div>
-	</header>
+    <header>
+        <div class="container">
+            <div  id="brandname">
+                
+            </div>
+            <h2>Spam Detector For E-mail/SMS Messages</h2>
 
-	<div class="ml-container">
+        </div>
+    </header>
 
-		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Your Message Here</p>
-		<!-- <input type="text" name="comment"/> -->
-		<textarea name="message" rows="6" cols="50"></textarea>
-		<br/>
+    <div class="ml-container">
 
-		<input type="submit" class="btn-info" value="predict">
-		
-	</form>
-		
-	</div>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <p>Enter Your Message Here</p>
+            <!-- <input type="text" name="comment"/> -->
+            <textarea name="message" rows="6" cols="50"></textarea>
+            <br />
 
-	
-	
+            <input type="submit" id="thani" class="btn-info" value="predict">
+
+        </form>
+
+    </div>
+
+
+
 
 </body>
+
 </html>
